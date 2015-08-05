@@ -1,0 +1,188 @@
+/*bootstrap3 overrides - version 1.0.0 for FSN-T */
+
+
+/*NAVBAR:*/
+
+.navbar-inverse {
+	background-color: #fffff0;
+	border-color: #ffffff;
+	 
+	font-weight: 700;
+}
+
+
+.navText {
+	 
+	border-right: 1px solid #fff;
+}
+
+.navText-xs {
+	margin-left: 15px;
+	border-bottom: 1px solid #fff;
+}
+
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus {
+color: #000000;
+font-weight: 700;
+background-color: #ccc;  /*white*/
+}
+
+
+.navbar-inverse .navbar-brand {
+	color: #000080;
+}
+
+.navbar-brand {
+	float: left;
+	height: 50px;
+	padding: 15px 15px;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+	color: #333;
+	background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+	color: #000000;
+	/*background-color: transparent;*/
+		background-color: #999;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #333;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+ background-color: #c4c4c4; 
+}
+
+.navbar-inverse .navbar-toggle {
+border-color: #333;
+}
+
+
+/*./navbar*/
+
+.modal-container .modal-footer {
+	padding: 15px;
+	text-align: center;
+	border-top: 1px solid #e5e5e5;
+
+}
+
+.modal-container .modal-header {
+		background-color: #000000;
+}
+
+
+.modal-container .modal-title {
+		color: #ffffff;
+		font-size: 1.5em;
+}
+
+.modal-container .modal-body p {
+	font-weight: 700;
+}
+ 
+/*btns*/
+.btn-primary {
+	border-color: #ffffff;
+	background-color: #000000;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active {
+	color: #000000;
+	background-color: #c4c4c4;
+	border-color: #c4c4c4;
+}
+
+.btn-primary.disabled, 
+.btn-primary[disabled], 
+ fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover, 
+ fieldset[disabled] .btn-primary:hover, 
+.btn-primary.disabled:focus, 
+.btn-primary[disabled]:focus, 
+ fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active, 
+.btn-primary[disabled]:active,
+ fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active, 
+ fieldset[disabled] .btn-primary.active {
+	background-color: #c4c4c4;
+	border-color: #c4c4c4;
+}
+
+
+.btn-pause {
+	background-color: #00ff00;
+	color: #666666;
+	height: 100px;
+	width: 100%;
+
+}
+
+.btn-delay {
+
+	background-color: gray;
+	color: #ffffff;
+	height: 100px;
+	width: 100%;
+}
+
+
+.btn-pause:hover, 
+.btn-pause:focus, 
+.btn-pause:active, 
+.btn-pause.active, 
+.btn-delay:hover, 
+.btn-delay:focus, 
+.btn-delay:active, 
+.btn-delay.active 
+{
+	color: #000000;
+	background-color: #c4c4c4;
+	border-color: #c4c4c4;
+}
+
+
+
+/*center modal*/
+.modal-dialog {
+    position:absolute;
+  	top:20%;
+    left: 20%;
+    width: 55%;
+
+}
+
+
+
+ .visible-xs.collapse.in {
+        display: block!important;
+    }
+    .visible-xs.collapse {
+        display: none!important;
+    }
+
+/*@media (max-width: 767px) {
+
+    .visible-xs.collapse.in {
+        display: block!important;
+    }
+    .visible-xs.collapse {
+        display: none!important;
+    }
+
+}*/

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<http auto-config="true">
+		<form-login login-page="/public/presentation/login.html"
+			default-target-url="/rest/usermgmt/landing" always-use-default-target="true"
+			authentication-failure-url="/rest/usermgmt/entryfailure"
+			login-processing-url="/rest/usermgmt/entry" />  <!-- j_security -->
+		<logout logout-success-url="/rest/usermgmt/exitsuccess" logout-url="/rest/usermgmt/exit" />  <!-- logout-processing -->
+		<intercept-url pattern="/rest/usermgmt/beforeentry"
+			access="ROLE_ADMIN,ROLE_USER,ROLE_ANONYMOUS" />
+		<intercept-url pattern="/rest/usermgmt/landing" access="ROLE_ADMIN,ROLE_USER" />
+		<intercept-url pattern="/rest/usermgmt/entryfailure"
+			access="ROLE_ADMIN,ROLE_USER,ROLE_ANONYMOUS" />
+		<intercept-url pattern="/rest/usermgmt/exitsuccess"
+			access="ROLE_ADMIN,ROLE_USER,ROLE_ANONYMOUS" />
+		<intercept-url pattern="/public/**"
+			access="ROLE_ADMIN,ROLE_USER,ROLE_ANONYMOUS" />
+		<intercept-url pattern="/rest/usermgmt/resetpassword**"
+			access="ROLE_ADMIN,ROLE_USER" />
+		<intercept-url pattern="/rest/test/admin"
+			access="ROLE_ADMIN" />
+		<intercept-url pattern="/rest/test/user"
+			access="ROLE_USER" />
+		<intercept-url pattern="/**" access="ROLE_ADMIN,ROLE_USER" />
+	</http>
+
+	<ldap-server url="ldap://localhost:389/dc=my-domain,dc=com" />
+
+	<authentication-manager>
+		<ldap-authentication-provider
+		   	user-dn-pattern="uid={0},ou=people" 
+			group-search-base="ou=groups"
+			group-role-attribute="cn" 
+			role-prefix="ROLE_" />
+	</authentication-manager>
+</beans:beans>

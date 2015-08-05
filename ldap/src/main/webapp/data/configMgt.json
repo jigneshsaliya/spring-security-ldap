@@ -1,0 +1,11 @@
+{
+  "xmlns": "http:\/\/www.tibco.com\/schemas\/UIWebServiceBW\/Shared Resource\/Schemas\/Schema.xsd",
+  "delayedBy": "admin crew",
+  "delayedOn": "2014-10-30T17:14:00Z",
+  "delayedValue": 12,
+  "pausedBy": "admin crew",
+  "pausedOn": "2014-10-30T17:14:55Z",
+  "pauseModeStatus": "pause",
+  "pauseScheduledToResume": "2014-11-15T05:00:35.243Z",
+  "statusCode": "200"
+}

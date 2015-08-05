@@ -1,0 +1,24 @@
+     <div class="jb-fsnt-login-container">
+     <form>
+          <div class="jb-fsnt-login-heading"> Login to FSN-T</div>
+          <div class="jb-fsnt-username-container">
+     	<div class="jb-login-userName jb-login-text"> Username</div>
+     	<input type="text" placeholder=" Enter Userame" ng-model="user" class="jb-fsnt-username-input jb-fsnt-login-inputs" ng-blur="removeSpaces()" inputfocus>
+        <div class="jb-fsnt-login-error-message" ng-show="showUserMessage">Enter valid user name.</div>
+        </div>
+        <div class="jb-fsnt-username-container">
+     	<div class="jb-login-password jb-login-text">Password</div>
+        <input type="password" placeholder=" Enter Password" ng-model="psssword" class="jb-fsnt-password-input jb-fsnt-login-inputs">
+         <div class="jb-fsnt-login-error-message"ng-show="showPasswordMessage">Enter valid password.</div>
+         </div>
+        <div class="jb-fsnt-login-button-container">
+        	<input type="reset" value="Reset" class="jb-fsnt-login-buttons jb-fsnt-reset-button" ng-click="setFocus(this)">
+        	<input type="submit" value="Login" class="jb-fsnt-login-buttons jb-fsnt-submit-button" ng-click="setLogin()">
+        </div>
+        </form>
+     </div>
+     <pause-overlay ng-hide="hidePopup('errorDefault')" popup-attributes="errorDefaultPopupAttributes" on-close="hideOverlay()" left-button-click="hideOverlay()" right-button-click="hideOverlay()">
+                <div class="fsnt-cm-popup-pause-confirmation">
+                     <div class="jb-fsnt-cm-popup-body-text">{{errorMessage}}</div>
+                </div>
+    </pause-overlay>

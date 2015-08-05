@@ -1,0 +1,7 @@
+{
+  "xmlns": "http:\/\/www.tibco.com\/schemas\/UIWebServiceBW\/Shared Resource\/Schemas\/Schema.xsd3",
+  "pauseModeStatus": "resume",
+  "resumedBy": "admin crew",
+  "resumedOn": "2014-11-14T05:22:48.68-05:00",
+  "statusCode": "200"
+}

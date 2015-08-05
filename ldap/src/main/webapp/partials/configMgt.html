@@ -1,0 +1,84 @@
+<!-- pause and delay button starts here-->
+            <div class="jb-fsnt-cm-button-container">
+                <div class="jb-fsnt-cm-pause-button-container">  
+                    <div class="jb-fsnt-pause-button-main-container">
+                        <div class="jb-fsnt-pause-button jb-fsnt-cm-buttons"  ng-click="pauseResumeClick()">
+                            <div class="fsnt-pause-resume-button-icon-container" ng-class="fsntStatus=='pause'?'jb-fsnt-pause-icon-container':'jb-fsnt-resume-icon-container'"></div>
+                             <div class="jb-fsnt-pause-resume-button-text-container">
+                                 <div class="jb-fsnt-pause-resume-main-text-container">{{pauseResumeButtonText}}</div>
+                                 <div class="jb-fsnt-pause-resume-sub-text-container">FSN-T Notification Processing</div>
+                             </div>
+                        </div>
+                    </div> 
+                    <div class="jb-fsnt-notification-text-container">
+                        <div class="fsnt-cm-notification-text fsnt-resume-notification-text" ng-show="fsntStatus=='pause'">
+                            Processing will automatically resume on {{pauseScheduledToResume | date:"MM/dd/yy" : 'UTC'}} - <span class="jb-fsnt-bold-text">{{pauseScheduledToResume | date:"h:mm a" : 'UTC'}}</span> ET
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="jb-fsnt-cm-dotted-line"></div>
+                <div class="jb-fsnt-cm-delay-button-container">
+                    <div class="jb-fsnt-delay-button-main-container">
+                        <div class="jb-fsnt-delay-button jb-fsnt-cm-buttons" ng-click="configureFSNTDelay()">
+                            <div class="fsnt-pause-resume-button-icon-container jb-fsnt-delay-icon-container">
+                            </div>
+                             <div class="jb-fsnt-delay-button-text-container">
+                                 <div class="jb-fsnt-delay-sub-text-container">Configure FSN-T Notification</div>
+                                 <div class="jb-fsnt-delay-main-text-container">Delay
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="jb-fsnt-notification-text-container">
+                        <div class="fsnt-cm-notification-text">
+                            A delay of <span class="jb-fsnt-bold-text">{{delayValue.currentDelayDuration}} minutes</span>
+                            is applied to all FSN-T applications
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pause-overlay ng-hide="hidePopup('pause')" popup-attributes="puasePopupAttributes" on-close="hideOverlay()" left-button-click="hideOverlay()" right-button-click="pauseFSNT()">
+                <div class="fsnt-cm-popup-pause-confirmation">
+                     <div class="jb-fsnt-cm-popup-body-text">Do you want to temporarily <span class="jb-fsnt-bold-text">PAUSE</span> the processing of all FSN-T notifications?
+                     </div>
+                </div>
+            </pause-overlay>
+            <pause-overlay ng-hide="hidePopup('resume')" popup-attributes="resumePopupAttributes" on-close="hideOverlay()" left-button-click="hideOverlay()" right-button-click="resumeFSNT()" >
+                <div class="fsnt-cm-popup-resume-confirmation">
+                     <div class="jb-fsnt-cm-popup-body-text">Do you want to <span class="jb-fsnt-bold-text">RESUME</span> the processing of all FSN-T notifications?
+                     </div>
+                   </div>
+            </pause-overlay>
+            <pause-overlay ng-hide="hidePopup('configureDelay')" popup-attributes="configureDelayPopupAttributes" on-close="hideOverlay()"  left-button-click="hideOverlay()" right-button-click="editFSNTDelay()">
+                <div class="fsnt-cm-popup-default-delay-confirmation">
+                     <div class="jb-fsnt-cm-popup-body-text">A Delay of <span class="jb-fsnt-bold-text">{{delayValue.currentDelayDuration}} minutes</span> is currently applied to all FSN-T notifications.
+                     </div>
+                   </div>
+            </pause-overlay>
+            <pause-overlay ng-hide="hidePopup('editFSNTDelay')" popup-attributes="editFSNTDelayPopupAttributes" on-close="hideOverlay()" left-button-click="hideOverlay()" right-button-click="confirmFSNTDelay()">
+                <div class="jb-fsnt-cm-popup-configure-delay-confirmation">
+                     <div class="jb-fsnt-cm-popup-body-text">
+                         <div class="jb-fsnt-cm-popup-configure-delay-text">Enter a new delay between <span class="jb-fsnt-bold-text">0-99</span> minutes.
+                         </div>
+                         <form  name="configureDelayForm">
+                         <div class="jb-fsnt-configure-delay-input-box">
+                              <input type="text" class="jb-fsnt-configure-delay-input" ng-model="delayValue.newDelayDuration" maxlength="2" name="delayInput" ng-required="true" ng-pattern="/^[0-9]*$/" focus="hidePopup('editFSNTDelay')">
+                         </div>
+                        <div class="jb-fsnt-configure-delay-error-message" ng-show="configureDelayForm.delayInput.$error.pattern || configureDelayForm.delayInput.$error.required">
+                        *Enter a valid number
+                         </div></form>
+                     </div>
+                   </div>
+            </pause-overlay>
+            <pause-overlay ng-hide="hidePopup('updateFSNTDelay')" popup-attributes="updateFSNTDelayPopupAttributes" on-close="hideOverlay()" left-button-click="editFSNTDelay()()" right-button-click="updateFSNTDelay()">
+                 <div class="fsnt-cm-popup-delay-confirmation">
+                     <div class="jb-fsnt-cm-popup-body-text">A Delay of <span class="jb-fsnt-bold-text">{{delayValue.newDelayDuration}} minutes</span> will be applied to all FSN-T notifications. Click <span class="jb-fsnt-bold-text">OK</span> to confirm.
+                     </div>
+                   </div>
+            </pause-overlay>
+                 <pause-overlay ng-hide="hidePopup('errorDefault')" popup-attributes="errorDefaultPopupAttributes" on-close="hideOverlay()" left-button-click="hideOverlay()" right-button-click="hideOverlay()">
+                <div class="fsnt-cm-popup-pause-confirmation">
+                     <div class="jb-fsnt-cm-popup-body-text">Please notify the FSN-T Administrator and try again later.</div>
+                </div>
+            </pause-overlay>

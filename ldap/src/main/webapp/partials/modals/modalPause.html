@@ -1,0 +1,25 @@
+       <div class="jb-fnst-popup-overlay-body"> 
+           <div class="jb-fsnt-cm-popup-container">
+             <div class="jb-fsnt-cm-popup-header">
+                 <div class="jb-fsnt-popup-header-text">{{popupAttributes.popupHeading}}</div>
+                 <div class="jb-fsnt-popup-header-cross-icon" ng-click="close()"></div>
+             </div>
+             <div class="jb-fsnt-cm-popup-body">
+                 <div class="fsnt-cm-popup-template">
+                    <!-- template for confirmation of delay editing starts-->
+                     <!-- template for confirmation of pause starts-->
+                <!--   <div class="fsnt-cm-popup-pause-confirmation">
+                     <div class="jb-fsnt-cm-popup-body-text">Do you want to temporarily <span class="jb-fsnt-bold-text">PAUSE</span> the processing of all FSN-T notifications?
+                     </div>
+                   </div> -->
+                   <ng-transclude></ng-transclude>
+                    <!-- template for confirmation of pause ends-->
+                     <div class="jb-fsnt-cm-popup-body-buttons">
+                         <div ng-class="popupAttributes.rightButtonText ? 'jb-fsnt-cm-popup-edit-button' : 'jb-fsnt-cm-popup-center-button'" class="jb-fsnt-popup-buttons" ng-click="leftButtonClick()">{{popupAttributes.leftButtonText}}</div>
+                         <div ng-show="popupAttributes.rightButtonText" class="jb-fsnt-cm-popup-ok-button jb-fsnt-popup-buttons" ng-click="rightButtonClick()">{{popupAttributes.rightButtonText}}</div>
+                     </div>
+                 </div>
+            
+             </div>
+           </div>
+</div>

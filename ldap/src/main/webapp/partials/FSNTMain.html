@@ -1,0 +1,58 @@
+
+        <!--header starts here-->
+			<div class="jb-fsnt-main-header">
+                    <div class="jb-fsnt-logo"></div>
+                    <div class="jb-fsnt-header-section-heading">
+                    <div class="jb-fsnt-header-section-1">
+                    <div class="jb-fsnt-heading">
+                               Flight Status Notification For Travelers(FSN-T)
+                    </div>
+                     </div>
+                     </div>
+                     <div class="jb-fsnt-header-user-details">
+                        <div class="fsnt-user-details-section">
+                              <div class="fsnt-user-name-section jb-fsnt-font-size1">Welcome, <span class="fsnt-user-name jb-user-name-font-size">{{firstName}}</span></div>
+                              <div class="jb-fsnt-user-designation jb-user-name-font-size">FSN-T {{userRoleText}}</div>
+                        </div>
+                        <div class="jb-fsnt-report-tab-section">
+                           <div class="jb-fsnt-report-button" ng-click="goToReports()">
+                                        Reports
+                             </div>
+                         </div>
+                         <div class="jb-fsnt-last-refresh-detail">
+                            Last Refresh<span class="fsnt-last-refresh-time">{{lastRefreshTime | date:"MM/dd/yyyy h:mm:ss a"}}</span>
+                        </div>
+                     </div>
+                      <!-- <div class="jb-fsnt-header-section-2">
+                         
+                     </div> -->
+            </div>
+            <!--header ends here-->
+            <!--navigation tabs starts here-->
+            <div class="jb-fsnt-header-navigation">
+            <div class="jb-fsnt-header-tabs-section1">
+                <div class="jb-fsnt-header-tabs fsnt-dashboard-tile" ng-click ="goToDashboard()">
+                    <div  ng-class="isActive('/dashboard') || isActive('/') ? 'jb-fsnt-active-nav-btn' : 'jb-fsnt-inactive-nav-btn'" class="jb-fsnt-dashboard-clickable-icon-container jb-fsnt-header-icon">
+                        Dashboard
+                    </div>
+                </div>
+                <div class="jb-fsnt-header-tabs fsnt-cm-tile" ng-hide="isReadOnly()" ng-click ="goToConfigMgt()">
+                    <div ng-class="isActive('/configMgt') ? 'jb-fsnt-active-nav-btn' : 'jb-fsnt-inactive-nav-btn'" class="jb-fsnt-cm-clickable-icon-container jb-fsnt-header-icon">
+                        Configuration Management
+                    </div>
+                </div></div>
+                <div class="jb-fsnt-header-tabs-section2" ng-show="isDashboard()">
+                    <div class=" jb-fsnt-header-report-subsection">
+                               
+                                    <div class="fsnt-header-notification-event-section jb-fsnt-notifications jb-text-padding">Notification Events
+                                    </div>
+                                    <div class="fsnt-header-notification-event-numbers jb-fsnt-notifications jb-notificaton-event-box">{{notificationStats.totalNotificationsEvents | number }}</div>
+                                    <div class="fsnt-header-notification-event-section jb-fsnt-notifications jb-text-padding">Notification Sent</div>
+                                    <div class="fsnt-header-notification-event-numbers jb-fsnt-notifications jb-notificaton-event-box">{{notificationStats.totalNotificationsSent | number }}</div>
+                                
+                            </div>
+                </div>
+                </div>
+            
+            <!--navigation tabs ends here-->
+<div app-view-segment="1"></div>

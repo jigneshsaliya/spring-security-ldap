@@ -1,0 +1,78 @@
+/* app.css */   
+
+body { padding-top: 40px; }
+
+.clock {
+
+	font-weight: 700;
+	font-size: 4em;
+	background-color: #c4c4c4;
+	display: inline-block;
+}
+
+.clock-dots {
+
+	font-weight: 700;
+	font-size: 4em;
+	 
+	display: inline-block;
+}
+
+
+.timerSection {
+	
+	text-align: center;
+}
+
+
+.container.login-form {
+	width: 55%;
+}
+
+.container .btnsContainer {
+	padding-top: 20px;
+	text-align: center;
+}
+
+
+.container.config-mgt {
+	margin-top: 50px;
+}
+
+.dashboard-container {
+	margin-left: auto;
+    margin-right: auto;
+    width: 70%;   
+}
+
+.msg {
+	background-color: white;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: .85em;
+}
+
+.msg2 {
+	 
+	margin-top: 15px;
+	margin-bottom: 5px;
+	
+	font-size: .85em;
+	margin-right: 30px;
+}
+ 
+.glyphicon {
+	color: #3F2B22;
+}
+.active .glyphicon {
+	color: #cdae51;
+}
+
+.nav-sidebar {
+	color:ffffff; 
+	float: right; 
+	margin-top:10px;
+	margin-right:20px;
+	font-size: 10px;
+}

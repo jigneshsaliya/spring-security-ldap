@@ -1,0 +1,665 @@
+@font-face {
+    font-family: SINFont;
+    src: url(../fonts/DINRegular.ttf);
+}
+@font-face {
+    font-family: SINFontBold;
+    src: url(../fonts/DINBold.ttf);
+}
+@font-face {
+    font-family: SINFontLight;
+    src: url(../fonts/DINLight.ttf);
+}
+body { font-family: SINFont }
+.jb-fsnt-font-size1 { font-size: 10px }
+.jb-fsnt-application-page {
+    width: 100%;
+}
+.jb-fsnt-page-layout {
+    width: 100%;
+    min-width: 1000px;
+}
+.jb-fsnt-main-header {
+    width: 100%;
+    height: 90px;
+    float: left;
+    min-width: 1000px;
+}
+.jb-fsnt-header-section-heading {
+    height: 45px;
+    width: 447px;
+    float: left;
+}
+.jb-fsnt-header-section-1 {
+    height: 45px;
+    float: left;
+    width: 100%;
+}
+.jb-fsnt-header-section-2 {
+    height: 50px;
+    float: right;
+    width: 713px;
+    margin-right: -188px;
+    margin-top: 1px;
+}
+.jb-fsnt-logo {
+    height: 90px;
+    float: left;
+    background: url('../img/JetBlue_Logo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 200px;
+}
+.jb-fsnt-heading {
+    float: left;
+    height: 40px;
+    font-size: 20px;
+    padding-top: 16px;
+    color: #2f2f2f;
+    font-family: SINFont;
+    width: 465px;
+}
+.jb-fsnt-header-report-section {
+    float: left;
+    height: 45px;
+    margin-top: -5px;
+}
+.jb-fsnt-header-user-details {
+    float: right;
+    height: 90px;
+    margin: 8px 10px;
+    text-align: right;
+}
+.jb-fsnt-user-designation { height: 20px }
+.jb-fsnt-notifications {
+    color: #4e4e4e;
+    font-size: 12px;
+    float: left;
+}
+.jb-fsnt-notifications:nth-child(3) { margin-left: 20px }
+.jb-fsnt-header-report-subsection {
+    height: 40px;
+    font-size: 13px;
+    width: 370px;
+    float: right;
+    background-color: #F1F5F8;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.jb-notificaton-event-box {
+    height: 25px;
+    margin-top: 7px;
+    background-color: white;
+    font-size: 14px;
+    text-align: center;
+    color: #454545;
+    padding-top: 3px;
+    width: 60px;
+    margin-left: 10px;
+}
+.jb-fsnt-report-tab-section {
+    height: 30px;
+    width: 82px;
+    margin-top: 10px;
+    margin-left: 94px;
+}
+.jb-fsnt-report-button {
+    height: 30px;
+    background-color: #FF9900;
+    width: 80px;
+    color: white;
+    padding: 4px 16px;
+    border-radius: 3px;
+    float: right;
+    cursor: pointer;
+}
+.jb-fsnt-report-button:hover{ background-color:#4E90CD }
+.jb-text-padding { padding-top: 10px }
+.jb-fsnt-header-navigation {
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin-top: 5px;
+    color: white;
+}
+.jb-fsnt-header-icon {
+    height: 50px;
+    width: 170px;
+    cursor: pointer;
+}
+.jb-fsnt-header-tabs {
+    float: left;
+    height: 50px;
+    width: 173px;
+}
+.jb-fsnt-dashboard-clickable-icon-container {
+    background: url('../img/Dashboard_icon.png');
+    background-repeat: no-repeat;
+    padding: 13px 71px;
+    font-size: 16px;
+    background-position: 20px 8px;
+    font-family: SINFontBold;
+    border-radius: 4px;
+}
+.jb-fsnt-cm-clickable-icon-container {
+    background: url('../img/CM_icon.png');
+    background-repeat: no-repeat;
+    padding: 6px 58px;
+    font-size: 16px;
+    background-position: 15px 6px;
+    line-height: 17px;
+    font-family: SINFontBold;
+    border-radius: 4px;
+}
+.jb-fsnt-active-nav-btn { background-color:  #4E90CD }
+.jb-fsnt-inactive-nav-btn { background-color: #FF9900 }
+.jb-fsnt-header-icon:hover{ background-color:  #4E90CD }
+.jb-fsnt-dashboard-refresh-btn-container {
+    height: 50px;
+    width: 250px;
+    float: right;
+    margin-top: -6px;
+}
+.jb-fsnt-dashboard-refresh-btn {
+    background: url('../img/Refresh_icon.png');
+    background-repeat: no-repeat;
+    background-position: 15px 8px;
+    height: 40px;
+    width: 135px;
+    background-color: #4E90CD;
+    margin-left: 108px;
+    font-size: 20px;
+    padding: 4px 49px;
+    cursor: pointer;
+}
+.jb-user-name-font-size { font-size: 11px }
+.jb-fsnt-last-refresh-detail {
+    height: 15px;
+    text-align: right;
+    font-size: 11px;
+    color: #2f2f2f;
+    padding: 6px 0px;
+}
+.jb-fsnt-dashboard-header {
+    width: 100%;
+    height: 70px;
+    float: left;
+    margin-top: 2px;
+    font-size: 12px;
+    color: #454545;
+    margin-right: 1.2%;
+}
+.jb-fsnt-header-section1 {
+    width: 30.5%;
+    height: 70px;
+    float: left;
+    background-color: #F1F5F8;
+}
+.jb-fsnt-header-tabs-section1 {
+    width: 350px;
+    height: 50px;
+    float: left;
+}
+.jb-fsnt-header-section-columns-aignment {
+    float: left;
+    text-align: center;
+    height: 50px;
+    line-height: 14px;
+    padding-top: 4px;
+}
+.jb-fsnt-header-section2-upperheader {
+    height: 20px;
+    width: 100%;
+    background-color: #999999;
+}
+.jb-fsnt-header-section2-lowerheader {
+    height: 50px;
+    width: 100%;
+    background-color: #454545;
+    color: white;
+    line-height: 14px;
+}
+.jb-fsnt-header-section2 .jb-fsnt-header-section-columns-aignment,
+.jb-fsnt-header-section3 .jb-fsnt-header-section-columns-aignment {
+    float: left;
+    text-align: center;
+    height: 50px;
+    padding-top: 4px;
+}
+.jb-fsnt-header-section2 {
+    width: 40%;
+    float: left;
+    height: 70px;
+}
+.jb-fsnt-header-section3 {
+    width: 20.5%;
+    float: left;
+}
+.jb-fsnt-header-section3 .jb-fsnt-header-section2-lowerheader {
+    width: 99.5%;
+    float: right;
+}
+.jb-fsnt-header-section2-upperheader-text {
+    text-align: center;
+    color: white;
+}
+.jb-fsnt-header-section4 {
+    float: left;
+    width: 9%;
+    background-color: #F1F5F8;
+}
+.jb-fsnt-dashboard-data-container {
+    float: left;
+	width: 100%;
+	overflow-y: scroll;
+	position: absolute;
+	top: 217px;
+	bottom: 15px;
+	min-width: 1000px;
+}
+/*.jb-fsnt-dashboard-data-container::-webkit-scrollbar { width: 10px }
+/* @comment keyword: scrollbar width of the scroll bar item was 5px but the size was hard to see and drag */
+/*.jb-fsnt-dashboard-data-container::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) }
+.jb-fsnt-dashboard-data-container::-webkit-scrollbar-thumb {
+    background-color: #4e4e4e;
+    border-radius: 5px;
+}*/
+.jb-fsnt-dashboard-data-template {
+    float: left;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    margin-right: 17px;
+}
+.jb-fsnt-dashboard-data-container .jb-fsnt-header-section-columns-aignment {
+    float: left;
+    text-align: center;
+    height: 40px;
+    padding-top: 13px;
+}
+.jb-fsnt-header-section2 .jb-fsnt-header-section2-lowerheader .jb-fsnt-header-section-columns-aignment:nth-child(1) { padding-top: 0px }
+.jb-fsnt-padding1 { padding-top: 4px }
+.jb-fsnt-header-section3 .jb-fsnt-header-section2-lowerheader >div { padding-top: 0px }
+.jb-fsnt-dashboard-email-icon {
+    background: url('../img/Email_icon.png');
+    background-repeat: no-repeat;
+    background-position: 55% 13px;
+}
+.jb-fsnt-dashboard-data-template:nth-child(odd) { background: #fafafa }
+.jb-fsnt-dashboard-data-template:nth-child(even) { background: #f4f4f4 }
+.jb-fsnt-dashboard-data-para {
+    width: 75px;
+    margin: auto;
+    margin-top: -6px;
+}
+/* dashboard styling ends here */
+/* cm page styling starts here */
+.jb-fsnt-cm-button-container {
+    width: 99.5%;
+    height: 490px;
+    float: left;
+    margin-top: 2px;
+}
+.jb-fsnt-cm-pause-button-container,
+.jb-fsnt-cm-delay-button-container {
+    float: left;
+    width: 100%;
+    height: 245px;
+}
+.jb-fsnt-cm-pause-button-container {
+    background: #f1f5f8;
+    margin-bottom: 3px;
+}
+.jb-fsnt-cm-delay-button-container { background: #fafafa }
+.jb-fsnt-cm-dotted-line {
+    float: left;
+    width: 100%;
+    height: 2px;
+    border-bottom: 1px dotted #b1b1b1;
+    margin-bottom: 1px;
+}
+.jb-fsnt-pause-button-main-container,
+.jb-fsnt-delay-button-main-container {
+    width: 100%;
+    height: 155px;
+    float: left;
+}
+.jb-fsnt-cm-buttons {
+    width: 385px;
+    height: 65px;
+    margin: 90px auto;
+    border-radius: 5px;
+    font-family: SINFontBold;
+    cursor: pointer;
+}
+.jb-fsnt-pause-button { background-color: #66cc66 }
+.jb-fsnt-delay-button { background-color: #999999 }
+.jb-fsnt-pause-button:hover { background-color: #5bc15b }
+.jb-fsnt-delay-button:hover { background-color: #8a8a8a }
+.jb-fsnt-pause-icon-container {
+    background: url('../img/Pause_icon.png');
+    background-repeat: no-repeat;
+    background-position: 29px 10px;
+    height: 65px;
+    width: 100px;
+    float: left;
+}
+.jb-fsnt-resume-icon-container {
+    background: url('../img/Play_icon.png');
+    background-repeat: no-repeat;
+    background-position: 29px 10px;
+    height: 65px;
+    width: 100px;
+    float: left;
+}
+.jb-fsnt-delay-icon-container {
+    background: url('../img/Delay_icon.png');
+    background-repeat: no-repeat;
+    background-position: 29px 10px;
+    height: 65px;
+    width: 100px;
+    float: left;
+}
+.jb-fsnt-pause-resume-button-text-container {
+    float: left;
+    width: 285px;
+    height: 65px;
+    color: #545454;
+}
+.jb-fsnt-pause-resume-main-text-container {
+    width: 285px;
+    float: left;
+    height: 32px;
+    font-size: 20px;
+    padding: 4px 63px;
+}
+.jb-fsnt-pause-resume-sub-text-container {
+    width: 285px;
+    float: left;
+    height: 33px;
+    font-size: 12px;
+    padding: 0px 10px;
+}
+.jb-fsnt-delay-button-text-container {
+    float: left;
+    width: 285px;
+    height: 65px;
+    color: #fff;
+}
+.jb-fsnt-delay-sub-text-container {
+    float: left;
+    height: 25px;
+    font-size: 12px;
+    width: 285px;
+    padding: 12px 19px;
+}
+.jb-fsnt-delay-main-text-container {
+    float: left;
+    height: 40px;
+    font-size: 20px;
+    width: 285px;
+    padding: 0px 63px;
+}
+.jb-fsnt-notification-text-container {
+    color: #282828;
+    font-size: 18px;
+    font-family: SINFont;
+    float: left;
+    width: 100%;
+    height: 70px;
+}
+.fsnt-cm-notification-text {
+    margin: 0 auto;
+    width: 550px;
+    height: 70px;
+    padding-left: 43px;
+    padding-top: 12px;
+}
+.fsnt-resume-notification-text { width: 600px }
+.jb-fsnt-delay-notification-text {
+    padding: 13px 0px;
+    width: 100%;
+    float: left;
+}
+.jb-fnst-popup-overlay-body {
+    position: fixed;
+    background-color: rgba(0,0,0,0.55);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: inherit;
+    z-index: 10;
+    width: 100%;
+    min-width: 1000px;
+    bottom: 0px;
+}
+.jb-fsnt-cm-popup {
+    height: 600px;
+    width: 99%;
+    position: absolute;
+    z-index: 99999;
+    min-width: 1000px;
+}
+.jb-fsnt-cm-popup-container {
+    min-height: 180px;
+    width: 350px;
+    background-color: white;
+    z-index: 99999;
+    margin: 212px auto;
+    border-radius: 3px;
+    overflow: auto;
+}
+.jb-fsnt-cm-popup-header {
+    width: 350px;
+    height: 35px;
+    float: left;
+    background-color: #5d7c8d;
+}
+.jb-fsnt-popup-header-text {
+    width: 300px;
+    height: 35px;
+    float: left;
+    font-family: SINFontBold;
+    font-size: 11px;
+    color: #fefefe;
+    padding: 9px 0px 0px 35px;
+}
+.jb-fsnt-popup-header-cross-icon {
+    background: url('../img/Close_icon.png');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 8px 10px 7px 20px;
+    cursor: pointer;
+}
+.jb-fsnt-cm-popup-body {
+    float: left;
+    min-height: 150px;
+    width: 350px;
+    overflow: auto;
+}
+.jb-fsnt-cm-popup-body-text {
+    width: 350px;
+    height: 100px;
+    float: left;
+    font-size: 14px;
+    color: #1d1d1d;
+    padding: 20px 15px 5px 20px;
+    text-align: left;
+}
+.jb-fsnt-cm-popup-body-buttons {
+    width: 350px;
+    height: 50px;
+    float: left;
+}
+.jb-fsnt-popup-buttons {
+    width: 75px;
+    height: 35px;
+    float: left;
+    background-color: #fa972c;
+    color: #fff;
+    font-family: SINFontBold;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.jb-fsnt-cm-popup-center-button { margin-left: 137.5px }
+.jb-fsnt-cm-popup-edit-button { margin-left: 82px }
+.jb-fsnt-cm-popup-ok-button { margin-left: 36px }
+.jb-fsnt-bold-text { font-family: SINFontBold }
+.jb-fsnt-hidden { display: none }
+.jb-fsnt-dashboard-EstArrTime-icon {
+    background: url('../img/delayed_a_icon.png');
+    background-repeat: no-repeat;
+    background-position: 47% 5px;
+}
+.jb-fsnt-dashboard-EstDepTime-icon {
+    background: url('../img/delayed_d_icon.png');
+    background-repeat: no-repeat;
+    background-position: 47% 5px;
+}
+.jb-fsnt-dashboard-UndelayArrTime-icon {
+    background: url('../img/undelayed_a_icon.png');
+    background-repeat: no-repeat;
+    background-position: 47% 5px;
+}
+.jb-fsnt-dashboard-UndelayDepTime-icon {
+    background: url('../img/undelayed_d_icon.png');
+    background-repeat: no-repeat;
+    background-position: 47% 5px;
+}
+.jb-fsnt-dashboard-Cancelled-icon {
+    background: url('../img/cancel_icon.png');
+    background-repeat: no-repeat;
+    background-position: 47% 5px;
+}
+.jb-fsnt-dashboard-DepGate-icon {
+    background: url('../img/gate_change_icon.png');
+    background-repeat: no-repeat;
+    background-position: 47% 5px;
+}
+.jb-fsnt-dashboard-StubNewOrigin-icon {
+    background: url('../img/origin_icon.png');
+    background-repeat: no-repeat;
+    background-position: 47% 5px;
+}
+.jb-fsnt-cm-popup-configure-delay-confirmation { height: 150px }
+.jb-fsnt-configure-delay-input-box {
+    float: left;
+    height: 80px;
+}
+.jb-fsnt-configure-delay-input { 
+    width: 85px;
+    border: 0px;
+    background-color: #F1F5F8;
+    margin: 22px 113px;
+    font-size: 40px;
+    font-family: SINFontBold;
+    text-align: center;
+    color: #1d1d1d;
+}
+.jb-fsnt-configure-delay-error-message {
+    color: red;
+    float: left;
+    font-size: 12px;
+    height: 20px;
+    width: 315px;
+    padding: 0px 96px;
+    font-family: SINFontLight;
+}
+.jb-fsnt-db-font-1 { font-size: 14px }
+.jb-fsnt-db-font-2 {
+    font-size: 12px;
+    font-family: SINFontBold;
+}
+.fsnt-user-details-section { height: 28px }
+/* cm page styling ends here */
+
+
+/*overrides for dashboard*/
+
+.totalElapsedTimeExceeded {
+    color: #3eb93e;
+}
+
+.totalElapsedTimeExceeded.active {
+    color: #ff0000;
+}
+.jb-fsnt-loading{
+    background :url('../img/ajax-loader-dbg.gif');
+    background-color: rgba(0,0,0,0.15);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    position: fixed;
+}
+/*login page*/
+.jb-fsnt-login-container{
+    width: 350px;
+    height: 360px;
+    margin: 100px auto;
+    border: 1px solid#D7D7D7;
+    font-family: SINFont;
+    font-size: 14px;
+}
+.jb-fsnt-login-heading{
+    font-size: 25px;
+    font-family: SINFontBold;
+    text-align: center;
+    margin: 20px 0px 15px 0px;
+}
+.jb-login-text{
+    padding-left: 35px;
+    margin-bottom: 10px;
+}
+.jb-fsnt-login-inputs{
+    margin-left: 35px;
+    width: 280px;
+    height: 35px;
+    font-size: 16px;
+}
+.jb-fsnt-login-button-container{
+    margin: 15px 0px 0px 55px;
+}
+.jb-fsnt-login-buttons{
+    width: 100px;
+    height: 40px;
+    margin-right: 30px;
+    background-color: #151515;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+.jb-fsnt-reset-button{
+    margin-right: 30px;
+}
+.jb-fsnt-login-message{
+    text-align: center;
+    margin-top: 13px;
+    font-size: 15px;
+    color: #F00;
+}
+.jb-fsnt-username-container{
+    width: 350px;
+    height: 95px;
+}
+.jb-fsnt-login-error-message{
+    color: red;
+    margin-left: 35px;
+    font-size: 13px;
+}
+/*login ends here*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+display: none !important;
+}

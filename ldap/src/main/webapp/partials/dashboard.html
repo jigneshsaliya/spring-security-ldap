@@ -1,0 +1,74 @@
+            <!--dashboard table header starts here-->
+
+            <div class="jb-fsnt-dashboard-header">
+                <div class="header-container">
+                    <div class="jb-fsnt-header-section1">
+                    <div class="jb-fsnt-header-section2-upperheader jb-fsnt-header-section2-upperheader-text">
+                       
+                        </div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width3"><br>Flight#</div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width4" ><br>City Pair</div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-padding1 jb-fsnt-width5">Scheduled <br>Flight<br> Date/Time</div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width6"><br>Notification</div>
+                    </div>
+                    <div class="jb-fsnt-header-section2">
+                        <div class="jb-fsnt-header-section2-upperheader jb-fsnt-header-section2-upperheader-text">
+                            Status of Notifications
+                        </div>
+                        <div class="jb-fsnt-header-section2-lowerheader">
+                            <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width1"><br>Trigger<br> Received</div>
+                            <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width1">Last<br> PNR <br>Queued</div>
+                            <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width1">Completed <br>send<br> to Email</div>
+                            <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width2">Total<br> Elepsed <br>Time</div>
+                            <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width1">Last <br>PNR<br> Remark</div>
+                        </div>
+                    </div>
+                    <div class="jb-fsnt-header-section3">
+                       <div class="jb-fsnt-header-section2-upperheader jb-fsnt-header-section2-upperheader-text">
+                            Statistics
+                        </div>
+                        <div class="jb-fsnt-header-section2-lowerheader">
+                             <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width7"><br># of<br> PNR's</div>
+                             <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width8"><br># of<br> Notifications</div>
+                             <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width9"><br># of<br> Emails</div>
+                        </div> 
+
+                    </div>   
+                    <div class="jb-fsnt-header-section4">
+                    <div class="jb-fsnt-header-section2-upperheader jb-fsnt-header-section2-upperheader-text">
+                       
+                        </div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width10"><br>Channel</div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width-margin"><br></div>
+                    </div>   
+                </div>
+            </div>
+            <!--dashboard table header ends here-->
+            <!--dashboard table data starts here-->
+            <div class="jb-fsnt-dashboard-data-container">
+            
+              <!-- @comment keyword: limit may need to use limit depending on server data leaving in for now tested with 50 rows in .json all is good. -->
+              <!--  <div class="jb-fsnt-dashboard-data-template" ng-repeat ="notification in notificationTable | limitTo: 25">  -->
+                      <div class="jb-fsnt-dashboard-data-template" ng-repeat ="notification in notificationTable track by $index | limitTo: 25">
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-db-font-2 jb-fsnt-width11">{{notification.flightNum}}</div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-db-font-2 jb-fsnt-width12">{{notification.origin + notification.destination}}</div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width13"><p class="jb-fsnt-dashboard-data-para">{{notification.schFlightDateTime | ignoreTimeZone | date:"MM/dd/yy h:mm:ss a" : 'UTC'}}</p></div>
+                        <div title ="{{notificationIconTitle[notification.notificationType]}}" class="jb-fsnt-header-section-columns-aignment jb-fsnt-notifications-icons jb-fsnt-width14 jb-fsnt-dashboard-{{notification.notificationType}}-icon"></div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width15"><p class="jb-fsnt-dashboard-data-para">{{notification.triggerReceived | ignoreTimeZone | date:"MM/dd/yy h:mm:ss a" : 'UTC'}}</p></div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width16"><p class="jb-fsnt-dashboard-data-para">{{notification.lastPNRQueued | ignoreTimeZone | date:"MM/dd/yy h:mm:ss a" : 'UTC'}}</p></div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width15"><p class="jb-fsnt-dashboard-data-para">{{notification.sendCompleted | ignoreTimeZone | date:"MM/dd/yy h:mm:ss a" : 'UTC'}}</p></div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width17 totalElapsedTimeExceeded" ng-class="{active: notification.totalElapsedTimeExceeded}">{{notification.totalElapsedTime}} </div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width16"><p class="jb-fsnt-dashboard-data-para">{{notification.lastPNRRemark | ignoreTimeZone | date:"MM/dd/yy h:mm:ss a" : 'UTC'}}</p></div>
+                        <div class="jb-fsnt-header-section-columns-aignment  jb-fsnt-db-font-1 jb-fsnt-width18">{{notification.statNumPNR}}</div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-width21 jb-fsnt-db-font-1">{{notification.statTotalNotifications}}</div>
+                        <div class="jb-fsnt-header-section-columns-aignment jb-fsnt-db-font-1 jb-fsnt-width19">{{notification.statNumforChannel}}</div>
+                        <div class="jb-fsnt-header-section-columns-aignment  jb-fsnt-dashboard-email-icon jb-fsnt-width20"></div>
+                    </div>
+            </div>
+
+            <!--dashboard table data ends here-->
+            <pause-overlay ng-hide="hidePopup('errorDefault')" popup-attributes="errorDefaultPopupAttributes" on-close="hideOverlay()" left-button-click="hideOverlay()" right-button-click="hideOverlay()">
+                <div class="fsnt-cm-popup-pause-confirmation">
+                     <div class="jb-fsnt-cm-popup-body-text">Please notify the FSN-T Administrator and try again later.</div>
+                </div>
+            </pause-overlay>
